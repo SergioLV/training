@@ -30,4 +30,4 @@ def two_number_sum(arr, target):
 
 arr = [3, 5, -4, 8, 11, 1, -1, 6]
 target = 10
-print(two_number_sum(arr, target))
+two_number_sum(arr, target)
