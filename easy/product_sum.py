@@ -21,4 +21,3 @@ print(productSum(array))
 # Recorrer el array.
 # Ver si el elemento es un arreglo
 # Recorrer el array
-# ver si el elemento es un arreglo
