@@ -13,7 +13,23 @@ def caesarCipherEncryptorBad(string, key):
         new_string += str(keys[0])
     return new_string
 
+# Time O(n), Space O(1)
+
+
+def caesarCipherEncryptor(string, key):
+    new_string = ""
+    alphabet = list("abcdefghijklmnopqrstuvwxyz")
+
+    for char in string:
+        new_string += getNewLetter(char, key, alphabet)
+    return new_string
+
+
+def getNewLetter(char, key, alphabet):
+    new_index = (alphabet.index(char) + key)
+    return alphabet[new_index % 26]
+
 
 string = "xyz"
 key = 2
-print(caesarCipherEncryptorBad(string, key))
+print(caesarCipherEncryptor(string, key))
