@@ -14,8 +14,8 @@ def runLengthEncoding(string):
 
 def formatString(char, count):
     formatted_string = ""
-    if count > 9:
-        formatted_string +=
+    # if count > 9:
+    # formatted_string +=
 
     return str(count) + str(char)
 
