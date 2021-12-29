@@ -41,5 +41,7 @@ def linkedListPalindrome(linkedList):
 a = LinkedList(1)
 # a.next = LinkedList(2)
 # a.next.next = LinkedList(2)
+b = a.reverse()
+print(b.value)
 
 print(linkedListPalindrome(a))

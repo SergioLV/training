@@ -10,15 +10,17 @@ def twoNumberSumNaive(array, targetSum):
     return []
 
 
-# O(n) time, O(n) space.
+# O(n^2) time, O(n) space.
 def twoNumberSum(array, targetSum):
     # Write your code here.
     for i in range(len(array)):
-        target = targetSum - array[i]
+        resto = targetSum - array[i]
         remainder = array[i+1:len(array)]
-        if(target in remainder):
+        if(resto in remainder):
             return [target, array[i]]
     return []
+
+    
 
 
 arr = [3, 5, -4, 8, 11, 1, -1, 6]

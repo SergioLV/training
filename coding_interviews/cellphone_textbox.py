@@ -20,7 +20,7 @@
 # The best solution I that i can think for the moment, is to translate the array into
 # numbers and after that, check if the numbers contains the translation.
 
-# Input phoneNumber = "3662277", words =["foo", "bar", "baz", "foobar", "emo", "cap", "car", "cat"]
+# Input phoneNumber = "3662277", words = ["foo", "bar", "baz", "foobar", "emo", "cap", "car", "cat"]
 #output ["bar", "cap", "car", "emo","foo","foobar"]
 
 def validWords(phoneNumber, array):
