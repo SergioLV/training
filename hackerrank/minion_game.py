@@ -2,13 +2,38 @@
 # This works only if I want to know a brute force solution.
 # A better approach is to know all the possible substrings in a string of length n.
 # (n-1) + (n-2) + ... or n*(n+1)/2.
+
 def minionGame(string):
+    len_string = len(string)
+    stuart_points = 0
+    kevin_points = 0
+    vowels = 'AEIOU'
+
+    for idx, char in enumerate(string):
+        if char in vowels:
+            kevin_points += len_string - idx
+        else:
+            stuart_points += len_string - idx
+    if stuart_points > kevin_points:
+        return 'Stuart ' + str(stuart_points)
+
+    elif stuart_points < kevin_points:
+        return 'Kevin ' + str(kevin_points)
+    else:
+        return 'Draw'
+
+
+def minionGameNaive(string):
     string = string.lower()
     stuart_points = pointsWithConsonants(string)
     kevin_points = pointsWithVowels(string)
     if stuart_points > kevin_points:
-        return 'Stuart ' + str(stuart_points)
-    return 'Kevin ' + str(kevin_points)
+        return 'Stuart' + str(stuart_points)
+
+    elif stuart_points < kevin_points:
+        return 'Kevin' + str(kevin_points)
+    else:
+        return 'Draw'
 
 
 def pointsWithConsonants(string):
@@ -70,5 +95,5 @@ def calculateScore(string, posible_words):
     return score
 
 
-string = 'BANAASA'
+string = 'BAANANAS'
 print(minionGame(string))
