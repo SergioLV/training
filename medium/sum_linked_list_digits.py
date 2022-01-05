@@ -47,9 +47,6 @@ def addZeros(linkedList, zeros):
     return linkedList
 
 
-def sumOfLinkedLists(linkedListOne, linkedListTwo):
-
-
 a = LinkedList(1)
 a.next = LinkedList(2)
 b = addZeros(a, 3)
